@@ -70,8 +70,8 @@ import { DropDownListAllModule } from '@syncfusion/ej2-angular-dropdowns';
 import { GridWrapperComponent } from './custom-grid/grid-wrapper/grid-wrapper.component';
 import { AppColumnDirective } from './custom-grid/app-column.directive';
 import { AppColumnsDirective } from './custom-grid/app-columns.directive';
-
-import { MyCompTestComponent }from './custom-grid/my-comp-test/my-comp-test.component'
+ 
+import { MyCompTestComponent }from './custom-grid/my-comp-test/my-comp-test.component';
 
 
 
