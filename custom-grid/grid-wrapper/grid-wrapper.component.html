@@ -1,0 +1,13 @@
+ <ejs-grid [dataSource]='datasource'>
+     <e-columns>
+       <ng-container *ngFor="let col of gridColumns.columns.toArray()">
+         <e-column [headerText]="col.headerText" [field]="col.field" [width]="col.width" *ngIf="col.template != null">
+              <ng-template #template let-data>
+                <ng-container *ngTemplateOutlet="col.template; context: {$implicit: data}"></ng-container> 
+              </ng-template>
+        </e-column>
+        <e-column [headerText]="col.headerText" [field]="col.field" [width]="col.width" *ngIf="col.template == null"></e-column> 
+       </ng-container>
+       <e-column headerText='Manage Records' width='160' [commands]='commands'></e-column>
+     </e-columns>
+	</ejs-grid>

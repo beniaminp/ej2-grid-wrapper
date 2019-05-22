@@ -1,0 +1,14 @@
+<div class="control-section">
+	<app-grid-wrapper [datasource]="data" height='350'>
+    <app-columns>
+      <app-column [field]="'OrderID'" [headerText]="'Test Dragos'" [width]="'120'"></app-column>
+      <app-column [field]="'CustomerName'" [headerText]="'Dragos'" [width]="'120'">
+          <ng-template #template let-row>
+           {{row | json}}
+            <div (click)="clicked(row)"><b>I am template</b></div>
+            <app-my-comp-test></app-my-comp-test>
+          </ng-template>
+      </app-column>
+    </app-columns>
+	</app-grid-wrapper>
+</div>
